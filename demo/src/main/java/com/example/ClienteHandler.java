@@ -17,9 +17,8 @@ public class ClienteHandler implements Runnable {
     @Override
     public void run() {
         try (
-            DataInputStream entrada = new DataInputStream(clienteSocket.getInputStream());
-            DataOutputStream saida = new DataOutputStream(clienteSocket.getOutputStream())
-        ) {
+                DataInputStream entrada = new DataInputStream(clienteSocket.getInputStream());
+                DataOutputStream saida = new DataOutputStream(clienteSocket.getOutputStream())) {
             boolean continuar = true;
 
             while (continuar) {
